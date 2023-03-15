@@ -8,14 +8,13 @@ arch=('any')
 url="https://github.com/biglinux/$pkgname"
 license=('GPL3')
 depends=('qt5ct')
+conflicts=('big-skel')
 provides=("$pkgname")
 source=("git+${url}.git")
 sha256sums=('SKIP')
-#install=${pkgname}.install
-
-#bigskel=$(pacman -Ss biglinux-skel- | awk -F'[/ ]' '{print $2}')
-conflicts=('big-skel')
-#"$bigskel"
+if [ -e "${pkgname}.install" ];then
+    install=${pkgname}.install
+fi
 
 package() {
     cp -r "${srcdir}/${pkgname}/etc/" "${pkgdir}/"
