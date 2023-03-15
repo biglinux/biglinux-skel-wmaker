@@ -4,11 +4,10 @@
     Icon = "file-manager.png";
   };
   soffice.Soffice = {
-    Icon = soffice.Soffice.xpm;
+    Icon = "soffice.Soffice.xpm";
   };
-  "brave-browser.brave.com,Chromium-browser" = {
-    AlwaysUserIcon = Yes;
-    Icon = browser.png;
+  firefox.Firefox = {
+    Icon = "brave.brave.xpm";
   };
   kcalc.kcalc = {
     AlwaysUserIcon = Yes;
