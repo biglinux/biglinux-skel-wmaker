@@ -8,7 +8,7 @@ post_install() {
 
 users=$(ls /home)
 for i in $users; do 
-echo 'chsh -s /bin/bash $user' >> /usr/bin/big-first-boot
+echo "chsh -s /bin/bash $user" >> /usr/bin/big-first-boot
 done
 
 }
