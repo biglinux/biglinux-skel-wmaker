@@ -6,10 +6,10 @@
 ## arg 1:  the new package version
 post_install() {
 
-users=$(ls /home)
-for i in $users; do 
-echo "chsh -s /bin/bash $user" >> /usr/bin/big-first-boot
-done
+echo '
+for user in $(ls /home); do  
+	chsh -s /bin/bash $user
+done' | tee -a /usr/bin/big-first-boot
 
 }
 
