@@ -5,7 +5,12 @@
 
 ## arg 1:  the new package version
 post_install() {
-    chsh -s /bin/bash
+
+users=$(ls /home)
+for i in $users; do 
+echo 'chsh -s /bin/bash $user' >> /usr/bin/big-first-boot
+done
+
 }
 
 ## arg 2:  the old package version
